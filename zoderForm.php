@@ -52,7 +52,7 @@
             .formMargin {
             margin-left: 150px;
             margin-right: 150px;
-            padding: 20px;
+            padding: 5px;
             }
             .formD{
                 border-radius: 100px;
@@ -74,7 +74,6 @@
             <form class="form-horizontal col-xs-12 formD" id="form" onload="dateTime()" method="post" enctype="multipart/form-data" action="oderForm.php">
 
                 <?php
-                    $itemCode = $_POST["itemCode"];
                     $rand=rand();
                     $_SESSION['rand']=$rand;
                 ?>
@@ -125,17 +124,17 @@
                     </div>
                     <div class="form-group formMargin">
                         <label for="item" class="control-label">Item Code :    </label>
-                        <input class="form-control col-sm-8" type="text" id="itm" name="itm" value="<?php echo "$itemCode" ?>" readonly required>
-                        <!-- <p style="margin-left: 5%;color:blue">*copy the item code from the product view</p> -->
+                        <input class="form-control" type="text" id="itm" name="itm" required>
+                        <p style="margin-left: 5%;color:blue">*copy the item code from the product view</p>
                     </div>
                     <div class="form-group formMargin">
                         <label for="size" class="control-label">Size :    </label>
                         <select class="form-control" id="size" name="size" required>
-                            <option value="XS">XS</option>
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
                         </select>
                     </div>
                     <div class="form-group formMargin">
@@ -188,7 +187,19 @@
 
         }
 
+        // function nameValidate() {
+        //     var name = document.getElementById("name").value;
+        //     var nameError = "Name should contain only charactors and More than 3 charactors";
+        //     if(reg.test(name) ) {
 
+        //         document.getElementById("nameErr").innerHTML = nameError;
+        //         document.getElementById("nameI").style.display = 'none';
+                
+        //     }
+        //     else{
+        //         document.getElementById("nameI").style.display = 'inline';
+        //     }
+        // }
         function nameValidate(val) {
 			var pattern=/^[a-zA-Z][a-zA-Z|\s]{1,}[a-zA-Z]$/;
 			var msgString="";
@@ -207,7 +218,29 @@
         var reg = /^\d+$/;
         var telError = "Mobile number should contain only numbers and Length=10";
 
+        // function htelValidate() {
+        //     var htel = document.getElementById("htel").value;
+        //     if(!reg.test(htel)) {
 
+        //         document.getElementById("htelErr").innerHTML = telError;
+        //         document.getElementById("htelI").style.display = 'none';            
+        //     }
+        //     else{
+        //         document.getElementById("htelI").style.display = 'inline';
+        //     }
+        // }
+
+        // function ltelValidate() {
+        //     var ltel = document.getElementById("ltel").value;
+        //     if(!reg.test(ltel)) {
+
+        //         document.getElementById("ltelErr").innerHTML = telError;
+        //         document.getElementById("ltelI").style.display = 'none';
+        //     }
+        //     else{
+        //         document.getElementById("ltelI").style.display = 'inline';
+        //     }
+        // }
         function htelValidate(val) {
 			var pattern=/^\d{10}$/;
 			var msgString="";
@@ -242,8 +275,7 @@
 			var msgString="";
 			
 			if (pattern.test(val)!=true){
-                msgString="Please enter valid email address."
-                document.getElementById("emailI").style.display = 'none';
+				msgString="Please enter valid email address."
 			}
 			else{
                 document.getElementById("emailI").style.display = 'inline';
@@ -252,7 +284,18 @@
 			document.getElementById('emailErr').innerHTML=msgString;
 		}
 
+        // function quantityValidate() {
+        //     var qtty = document.getElementById("qtty").value;
+        //     var qttyError = "Quantity should contain only numbers and More than 0";
+        //     if(!reg.test(qtty) || qtty<=0) {
 
+        //         document.getElementById("qttyErr").innerHTML = qttyError;
+        //         document.getElementById("qttyI").style.display = 'none';
+                
+        //     }else{
+        //         document.getElementById("qttyI").style.display = 'inline';
+        //     }
+        // }
         function quantityValidate(val) {
 			var pattern=/^\d{1,3}$/;
 			var msgString="";
@@ -274,27 +317,19 @@
 
         function clearError(id) {
             document.getElementById(id).innerHTML = "";
-        } 
-        
-        //stop resubmitting when refresh
-        if ( window.history.replaceState ) {
-            window.history.replaceState( null, null, window.location.href );
-        }
+        }    
    
     </script>         
 
     <?php   
 
-// ........................   Add Data to the Database   ...............................
+// ........................Add Data to the Database...............................
     
-
         use PHPMailer\PHPMailer\PHPMailer;
         use PHPMailer\PHPMailer\Exception;    
 
         
         if (isset($_POST['submit'])) {
-
-        
             
         $date = $_POST["date"];
         $time = $_POST["time"];
@@ -328,8 +363,7 @@
             document.getElementById("form").reset();
             window.close();
             </script>';
-            sendMail();        
-
+            sendMail();
 
         } else{
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
@@ -337,7 +371,7 @@
         }
         }
 
-// ......................   Send Mail Function  ..........................................
+// ......................Send Mail Function..........................................
 
         function sendMail() {
         
@@ -372,7 +406,7 @@
             $mail->Subject = 'Oder Confirmation';
             $mail->isHTML(true);
             $mailContent = '
-            <div style="margin: 30px 20px 20px 40px">
+            <div style="margin: 30px 20px 20px 60px">
                 <h1 style="text-align: center;">You have successfully placed the oder</h1>
 
                 <p>Date :' .$date.'</p>

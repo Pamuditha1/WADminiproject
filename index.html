@@ -11,16 +11,23 @@
     <link rel="stylesheet" type="text/css" href="pageStyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- Fonts -->
+
+    <link href='https://fonts.googleapis.com/css?family=Ceviche One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dynalight' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inknut Antiqua' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
+
     <title>Fashions</title>
 
 </head>
 
 
 
-<body style="background-color: #152238">
+<body>
     <div class="container-fluid">
 
-<!--------------------------------------------         Header       -------------------------- --------------->
+        <!--------------------------------------------         Header       -------------------------- --------------->
 
 
         <div id="header">
@@ -44,547 +51,530 @@
                             Username : <input id="uname" name="uname" type="text"><br>
                             Password : <input id="pswrd" name="pswrd" type="password">
                             <button type="submit" class="btn btn-info">Enter</button>
-                            </form>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
-
-<!----------------------------------------       Navigation Bar       ---------------------------------------------- -->
-
-
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="  position: -webkit-sticky;position: sticky;top: 0;z-index:+10">
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#foot">Contact US</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-<!-------------------------------------         Body       -------------------------------------------------->
-
-
-            <div class="container">
-                <div class="row">
-
-                    <!-- Content -->
-                    <div class="col-12">
-
-<!-- -------------------------------------     Crusual       -------------------------------------->
-
-
-                        <div id="carouselIndicators" class="carousel slide" style="width:100%;height: auto;" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-slide-to="0" class="active"></li>
-                                <li data-slide-to="1"></li>
-                                <li data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="./images/Carousel1.png" class="d-block w-100" id="size" responsive>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./images/Carousel2.png" class="d-block w-100" responsive>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./images/Carousel3.png" class="d-block w-100" responsive>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-
-<!-- -----------------------------------------------    Products    -------------------------------------- -->
-                        
-
-<!---------------------------------------------    View Product Modal    ---------------------------------------- -->
-
-                        <div id="modalView"></div>
-
-                        <div class="container">
-
-<!-------------------------------------------------      Gents Wear    ---------------------------------------------->
-
-
-                            <h1 style="color: white;opacity: 0.5;margin:20px">Gents Wear</h1>
-                            <div class="card-deck" id="mensWear">
-
-                                <div class="col-md-3 col-xs-6 ">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/men_s wear/Formal men_s slim fit shirt.jpg" a responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Formal Slim Fit Shirt</h5>
-                                            <p class="price">Rs.1950</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M001"
-                                            onclick="showModal('M001','Formal Slim Fit Shirt','./products images/men_s wear/Formal men_s slim fit shirt.jpg','Rs.1950')">View</button>
-                                        </div>
-                                    </div>
-                                </div>                               
-
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/men_s wear/men_s casual printed shirt.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Casual Printed Shirt</h5>
-                                            <p class="price">Rs.1550</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M002"
-                                            onclick="showModal('M002','Casual Printed Shirt','./products images/men_s wear/men_s casual printed shirt.jpg','Rs.1550')">View</button>
-                                        </div>
-                                    </div>                                    
-                                </div>                               
-                                
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/men_s wear/men_s cotton short sleeeve v-neck shirt.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Casual V Neck T-Shirt</h5>
-                                            <p class="price">Rs.990</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M003"
-                                            onclick="showModal('M003','Casual V Neck T-Shirt','./products images/men_s wear/men_s cotton short sleeeve v-neck shirt.jpg','Rs.990')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/men_s wear/men_s long sleeve gym tshirt.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Long Sleeve Gym T-Shirt</h5>
-                                            <p class="price">Rs.1250</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M004"
-                                            onclick="showModal('M004','Long Sleeve Gym T-Shirt','./products images/men_s wear/men_s long sleeve gym tshirt.jpg','Rs.1250')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
-                                        <img class="card-img-top cardImage" src="./products images/men_s wear/men_s short sleeves shirt.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Short Sleeves Shirt</h5>
-                                            <p class="price">Rs.1350</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M005"
-                                            onclick="showModal('M005','Short Sleeves Shirt','./products images/men_s wear/men_s short sleeves shirt.jpg','Rs.1350')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
-                                        <img class="card-img-top cardImage" src="./products images/men_s wear/men_s long sleeve sport Tshirt.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Long Sleeve Sport T-Shirt</h5>
-                                            <p class="price">Rs.1850</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M006"
-                                            onclick="showModal('M006','Long Sleeve Sport T-Shirt','./products images/men_s wear/men_s long sleeve sport Tshirt.jpg','Rs.1850')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
-                                        <img class="card-img-top cardImage" src="./products images/men_s wear/men_s t shirt.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">V neck T-Shirt</h5>
-                                            <p class="price">Rs.950</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M007"
-                                            onclick="showModal('M007','V neck T-Shirt','./products images/men_s wear/men_s t shirt.jpg','Rs.950')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
-                                        <img class="card-img-top cardImage" src="./products images/men_s wear/men_s line crosss print cotton t shirt.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Line Cross T-Shirt</h5>
-                                            <p class="price">Rs.1150</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M008"
-                                            onclick="showModal('M008','Line Cross T-Shirt','./products images/men_s wear/men_s line crosss print cotton t shirt.jpg','Rs.1150')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
-                                        <img class="card-img-top cardImage" src="./products images/men_s wear/men_s casual short.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Casual Short</h5>
-                                            <p class="price">Rs.890</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M009"
-                                            onclick="showModal('M009','Casual Short','./products images/men_s wear/men_s casual short.jpg','Rs.890')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
-                                        <img class="card-img-top cardImage" src="./products images/men_s wear/men_s swim short.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Swim Short</h5>
-                                            <p class="price">Rs.750</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M010"
-                                            onclick="showModal('M010','Swim Short','./products images/men_s wear/men_s swim short.jpg','Rs.750')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
-                                        <img class="card-img-top cardImage" src="./products images/men_s wear/men_s casual linen  pants.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Casual Linen Pants</h5>
-                                            <p class="price">Rs.2550</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M011"
-                                            onclick="showModal('M011','Casual Linen Pants','./products images/men_s wear/men_s casual linen  pants.jpg','Rs.2250')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
-                                        <img class="card-img-top cardImage" src="./products images/men_s wear/men_s designer trousers.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Designer Trousers</h5>
-                                            <p class="price">Rs.1550</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M012"
-                                            onclick="showModal('M012','Designer Trousers','./products images/men_s wear/men_s designer trousers.jpg','Rs.1150')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-<!--------------------------------------------------   Ladies Wear   -------------------------------------------------------->
-
-
-                            <h1 style="color: white;opacity: 0.5;margin:20px">Ladies Wear</h1>
-                            <div class="card-deck" id="womenWear">
-                                <div class="col-md-3 col-xs-6 ">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/ladies wear/women_s summer casual frock.jpg" responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Summer Casual Frock</h5>
-                                            <p class="price">Rs.2550</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W001"
-                                            onclick="showModal('W001','Summer Casual Frock','./products images/ladies wear/women_s summer casual frock.jpg','Rs.2550')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/ladies wear/women_s party dress.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Party Dress</h5>
-                                            <p class="price">Rs.2750</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W002"
-                                            onclick="showModal('W002','Party Dress','./products images/ladies wear/women_s party dress.jpg','Rs.2750')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6 ">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/ladies wear/women_s plus size short sleeve dress.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Short Sleeve Dress</h5>
-                                            <p class="price">Rs.1850</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="W003"
-                                            onclick="showModal('W003','Short Sleeve Dress','./products images/ladies wear/women_s plus size short sleeve dress.jpg','Rs.1850')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/ladies wear/women_s blue denim playsuit.webp"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Blue Denim playsuit</h5>
-                                            <p class="price">Rs.3150</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W004"
-                                            onclick="showModal('W004','Blue Denim playsuit','./products images/ladies wear/women_s blue denim playsuit.webp','Rs.3150')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6 ">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/ladies wear/ladies smart casual cotton blouse.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Smart Casual Cotton Blouse</h5>
-                                            <p class="price">Rs.950</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W005"
-                                            onclick="showModal('W005','Smart Casual Cotton Blouse','./products images/ladies wear/ladies smart casual cotton blouse.jpg','Rs.950')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/ladies wear/women_s striped t shirt.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Striped T-Shirt</h5>
-                                            <p class="price">Rs.1250</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W006"
-                                            onclick="showModal('W006','Striped T-Shirt','./products images/ladies wear/women_s striped t shirt.jpg','Rs.1250')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6 ">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/ladies wear/women_s casual striped crop top.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Casual Striped Crop Top</h5>
-                                            <p class="price">Rs.990</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W007"
-                                            onclick="showModal('W007','Casual Striped Crop Top','./products images/ladies wear/women_s casual striped crop top.jpg','Rs.990')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/ladies wear/women_s shoulder ribbed white t shirt.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Shoulder Ribbed T-Shirt</h5>
-                                            <p class="price">Rs.2750</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W008"
-                                            onclick="showModal('W008','Shoulder Ribbed T-Shirt','./products images/ladies wear/women_s shoulder ribbed white t shirt.jpg','Rs.2750')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6 ">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/ladies wear/womens cotton linen vintage trouser.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Linen Vintage Trouser</h5>
-                                            <p class="price">Rs.2650</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W009"
-                                            onclick="showModal('W009','Linen Vintage Trouser','./products images/ladies wear/womens cotton linen vintage trouser.jpg','Rs.2650')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/ladies wear/Womens Jumpsuit.jpeg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Jumpsuit</h5>
-                                            <p class="price">Rs.2750</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W010"
-                                            onclick="showModal('W010','Jumpsuit','./products images/ladies wear/Womens Jumpsuit.jpeg','Rs.2750')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6 ">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/ladies wear/women_s smart casual skirt.jpg"   responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Smart Casual Skirt</h5>
-                                            <p class="price">Rs.1150</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W011"
-                                            onclick="showModal('W011','Smart Casual Skirt','./products images/ladies wear/women_s smart casual skirt.jpg','Rs.1150')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-6">
-                                    <div class="card cardStyle">
-                                        <img class="card-img-top cardImage" src="./products images/ladies wear/women_s running shorts.jpg" responsive>
-                                        <div class="card-img-overlay">
-                                            <h5 class="card-title cardT">Running Short</h5>
-                                            <p class="price">Rs.2750</p>
-                                            <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W012"
-                                            onclick="showModal('W012','Running Short','./products images/ladies wear/women_s running shorts.jpg','Rs.2750')">View</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        </form>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
                     </div>
+
                 </div>
             </div>
+            <div id="siteName">
+                <h1 id="brand" >FashionStore.lk</h1>
+                <h4 id="tagline">- wear your dream -</h4>
+            </div>
+            
 
 
-<!---------------------------------------------    Footer    ------------------------------------------------------->
-
-
-            <footer id="foot " class="foot " style="height: auto; ">
-
-                <div style="background-color: #6351ce; ">
-                    <div class="container ">
-
-                        <div class="row py-4 d-flex align-items-center ">
-                            <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0 " style="border-radius: 10px; ">
-                                <h6 class="mb-0 ">Get connected with us on social networks!</h6>
-                            </div>
-
-                            <div class="col-md-6 col-lg-7 text-center text-md-right ">
-
-                                <!-- Social -->
-                                <a href="https://www.facebook.com/ " target="_blank ">
-                                    <img src="fb.jpg " height="50px " style="border-radius: 5px; ">
-                                </a>
-                                <a href="https://www.instagram.com/ " target="_blank ">
-                                    <img src="insta.jfif " height="50px " style="border-radius: 7px; ">
-                                </a>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="container text-center text-md-left mt-5 ">
-                    <div class="row mt-3 ">
-                        <div class="col-xs-12 col-md-3 mx-auto mb-4 ">
-                            <h6 class="text-uppercase font-weight-bold " style="text-align: center; "> Fashion Store</h6>
-                            <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto " style="width: 60px; ">
-                            <a href="#header ">
-                                <img class="img-thumbnail " src="Logo.jpg " width="100% " responsive>
-                            </a>
-
-
-                        </div>
-
-                        <div class="col-xs-12 col-md-3 mx-auto mb-4 ">
-                            <h6 class="text-uppercase font-weight-bold ">Products</h6>
-                            <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto " style="width: 60px; ">
-                            <p>
-                                <a href="#mensWear ">Men's Wear</a>
-                            </p>
-                            <p>
-                                <a href="#womenWear ">Women's Wear</a>
-                            </p>
-                        </div>
-
-                        <div class="col-xs-12 col-md-3 mx-auto mb-4 ">
-
-                            <!-- Links -->
-                            <h6 class="text-uppercase font-weight-bold ">Useful links</h6>
-                            <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto " style="width: 60px; ">
-                            <p>
-                                <a href="#! ">Your Account</a>
-                            </p>
-                            <p>
-                                <a href="https://colombofashionweek.com/ " target="_blank ">Fashion News</a>
-                            </p>
-                            <p>
-                                <a href="#! ">Help</a>
-                            </p>
-
-                        </div>
-
-
-                        <!-- Contact -->
-                        <div class="col-xs-12 col-md-3 mx-auto mb-md-0 mb-4 ">
-
-
-                            <h6 class="text-uppercase font-weight-bold " style="text-align: center; ">Contact</h6>
-                            <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto " style="width: 60px; ">
-                            <p>
-                                <i class="mr-3 "></i> No.20, Kandy Road, Kelaniya<br> Sri Lanka</p>
-                            <p>
-                                <i class="mr-3 "></i> fashionstore@fashion.com</p>
-                            <p>
-                                <i class="mr-3 "></i> +94 112 500 400</p>
-                            <p>
-                                <i class="mr-3 "></i> +94 112 550 450</p>
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Copyright -->
-                <div class="footer-copyright text-center py-3 " style="background-color: black;color: white ">© 2020 Copyright:
-                    <a href="https://cal.kln.ac.lk/course/view.php?id=6029 " target="_blank "> WAD2020.com</a>
-                </div>
-
-
-            </footer>
         </div>
 
-        <button onclick="scrollToTop() " id="goTop ">
-        <img src="goTop.png " width=40px; height=60px; >
-        </button>
-
-        <script>
-            
-
-            // Copy Item Code Function            
-            function copyF() {
-                var code = document.getElementById("code");
-                code.select();
-                code.setSelectionRange(0, 99999);
-                document.execCommand("copy");
-                alert("Coppied text " + copy.innerHTML);
-            }
+        <!----------------------------------------       Navigation Bar       ---------------------------------------------- -->
 
 
-            function scrollToTop() {
 
-                $(window).delay("slow ").scrollTop(0);
-            }
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="Navbar" style="  position: -webkit-sticky;position: sticky;top: 0;z-index:+10">
 
-            function showModal(id,name,src,price) {
-                var el = document.getElementById("modalView");
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="AboutUs.html">About</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Place Order</a>
+                    </li>                                      
+                    <li class="nav-item">
+                        <a class="nav-link" href="ContactUs.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-
-                el.innerHTML = '<div class="modal fade" id="'+id+'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
-                '<div class="modal-dialog">'+
-                    '<div class="modal-content">' +
-                        '<div class="modal-header">' +
-                            '<h5 class="modal-title" id="exampleModalLabel">'+name+'</h5>'+
-                            '<br>'+
-            
-                            '<button type="button" class="close" data-dismiss="modal" aria-label="Close">'+
-                                '<span aria-hidden="true">&times;</span>'+
-                            '</button>'+
-                        '</div>'+
-                        '<div class="modal-body" style="background-color: #ecf0f1;">'+
-                            '<img src="'+src+'" width="100%" style="border-radius: 10px; box-shadow: darkgray;">'+
-                            '<div class="modalBody">'+
-                                '<h3 style="margin-top: 20%;color: blue;">'+price+'</h3><br>'+
-                                '<h5 style="margin-top: 10px;">Size : S/M/L/XL</h5>'+
-                                '<h5 style="margin-top: 10px;">Item Code : </h5>'+
-                                '<input style="margin-top: 10px;background-color:yellow;width:80%" type="text" id="code" readonly value="'+id+'"></input><br>'+
-                                
-                                '<button class="btn btn-outline-dark" style="margin-top: 10px;" onclick="copyF()">'+
-                                    'Copy Item Code '+                                   
-                            '</button>'+
-                            '</div>'+
-                        '</div>'+
-                        '<div class="modal-footer">'+
-                            '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>'+
-                            '<a href="oderForm.php" target="_blank">'+
-                                '<button type="button" class="btn btn-primary">Buy</button>'+
-                            '</a>'+
-                        '</div>'+
-                    '</div>'+
-                '</div>'+
-            '</div>';
-
-            }
-        </script>
+        <!-------------------------------------         Body       -------------------------------------------------->
 
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+        <div class="container">
+            <div class="row">
+
+                <!-- Content -->
+                <div class="col-12">
+
+                    <!-- -------------------------------------     Crusual       -------------------------------------->
+
+
+                    <div id="carouselIndicators" class="carousel slide" style="width:100%;height: auto;" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-slide-to="0" class="active"></li>
+                            <li data-slide-to="1"></li>
+                            <li data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./images/Carousel2.png" class="d-block w-100" id="size" responsive>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/Carousel1.png" class="d-block w-100" responsive>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/Carousel3.png" class="d-block w-100" responsive>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                    <!-- -----------------------------------------------    Products    -------------------------------------- -->
+
+
+                    <!---------------------------------------------    View Product Modal    ---------------------------------------- -->
+
+                    <div id="modalView"></div>
+
+                    <div class="container">
+
+                        <!-------------------------------------------------      Gents Wear    ---------------------------------------------->
+
+
+                        <h1>Gents Wear</h1>
+                        <div class="card-deck" id="mensWear">
+
+                            <div class="col-md-3 col-xs-6 ">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/men_s wear/Formal men_s slim fit shirt.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Formal Slim Fit Shirt</h5>
+                                        <p class="price">Rs.1950</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M001" onclick="showModal('M001','Formal Slim Fit Shirt','./products images/men_s wear/Formal men_s slim fit shirt.jpg','Rs.1950')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/men_s wear/men_s casual printed shirt.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Casual Printed Shirt</h5>
+                                        <p class="price">Rs.1550</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M002" onclick="showModal('M002','Casual Printed Shirt','./products images/men_s wear/men_s casual printed shirt.jpg','Rs.1550')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/men_s wear/men_s cotton short sleeeve v-neck shirt.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Casual V Neck T-Shirt</h5>
+                                        <p class="price">Rs.990</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M003" onclick="showModal('M003','Casual V Neck T-Shirt','./products images/men_s wear/men_s cotton short sleeeve v-neck shirt.jpg','Rs.990')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/men_s wear/men_s long sleeve gym tshirt.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Long Sleeve Gym T-Shirt</h5>
+                                        <p class="price">Rs.1250</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M004" onclick="showModal('M004','Long Sleeve Gym T-Shirt','./products images/men_s wear/men_s long sleeve gym tshirt.jpg','Rs.1250')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
+                                    <img class="card-img-top cardImage" src="./products images/men_s wear/men_s short sleeves shirt.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Short Sleeves Shirt</h5>
+                                        <p class="price">Rs.1350</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M005" onclick="showModal('M005','Short Sleeves Shirt','./products images/men_s wear/men_s short sleeves shirt.jpg','Rs.1350')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
+                                    <img class="card-img-top cardImage" src="./products images/men_s wear/men_s long sleeve sport Tshirt.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Long Sleeve Sport T-Shirt</h5>
+                                        <p class="price">Rs.1850</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M006" onclick="showModal('M006','Long Sleeve Sport T-Shirt','./products images/men_s wear/men_s long sleeve sport Tshirt.jpg','Rs.1850')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
+                                    <img class="card-img-top cardImage" src="./products images/men_s wear/men_s t shirt.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">V neck T-Shirt</h5>
+                                        <p class="price">Rs.950</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M007" onclick="showModal('M007','V neck T-Shirt','./products images/men_s wear/men_s t shirt.jpg','Rs.950')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
+                                    <img class="card-img-top cardImage" src="./products images/men_s wear/men_s line crosss print cotton t shirt.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Line Cross T-Shirt</h5>
+                                        <p class="price">Rs.1150</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M008" onclick="showModal('M008','Line Cross T-Shirt','./products images/men_s wear/men_s line crosss print cotton t shirt.jpg','Rs.1150')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
+                                    <img class="card-img-top cardImage" src="./products images/men_s wear/men_s casual short.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Casual Short</h5>
+                                        <p class="price">Rs.890</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M009" onclick="showModal('M009','Casual Short','./products images/men_s wear/men_s casual short.jpg','Rs.890')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
+                                    <img class="card-img-top cardImage" src="./products images/men_s wear/men_s swim short.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Swim Short</h5>
+                                        <p class="price">Rs.750</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M010" onclick="showModal('M010','Swim Short','./products images/men_s wear/men_s swim short.jpg','Rs.750')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
+                                    <img class="card-img-top cardImage" src="./products images/men_s wear/men_s casual linen  pants.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Casual Linen Pants</h5>
+                                        <p class="price">Rs.2550</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M011" onclick="showModal('M011','Casual Linen Pants','./products images/men_s wear/men_s casual linen  pants.jpg','Rs.2250')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle" style="width:100%;margin:10px;padding:10px">
+                                    <img class="card-img-top cardImage" src="./products images/men_s wear/men_s designer trousers.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Designer Trousers</h5>
+                                        <p class="price">Rs.1550</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#M012" onclick="showModal('M012','Designer Trousers','./products images/men_s wear/men_s designer trousers.jpg','Rs.1150')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--------------------------------------------------   Ladies Wear   -------------------------------------------------------->
+
+
+                        <h1>Ladies Wear</h1>
+                        <div class="card-deck" id="womenWear">
+                            <div class="col-md-3 col-xs-6 ">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/ladies wear/women_s summer casual frock.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Summer Casual Frock</h5>
+                                        <p class="price">Rs.2550</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W001" onclick="showModal('W001','Summer Casual Frock','./products images/ladies wear/women_s summer casual frock.jpg','Rs.2550')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/ladies wear/women_s party dress.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Party Dress</h5>
+                                        <p class="price">Rs.2750</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W002" onclick="showModal('W002','Party Dress','./products images/ladies wear/women_s party dress.jpg','Rs.2750')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6 ">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/ladies wear/women_s plus size short sleeve dress.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Short Sleeve Dress</h5>
+                                        <p class="price">Rs.1850</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="W003" onclick="showModal('W003','Short Sleeve Dress','./products images/ladies wear/women_s plus size short sleeve dress.jpg','Rs.1850')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/ladies wear/women_s blue denim playsuit.webp" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Blue Denim playsuit</h5>
+                                        <p class="price">Rs.3150</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W004" onclick="showModal('W004','Blue Denim playsuit','./products images/ladies wear/women_s blue denim playsuit.webp','Rs.3150')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6 ">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/ladies wear/ladies smart casual cotton blouse.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Smart Casual Cotton Blouse</h5>
+                                        <p class="price">Rs.950</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W005" onclick="showModal('W005','Smart Casual Cotton Blouse','./products images/ladies wear/ladies smart casual cotton blouse.jpg','Rs.950')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/ladies wear/women_s striped t shirt.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Striped T-Shirt</h5>
+                                        <p class="price">Rs.1250</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W006" onclick="showModal('W006','Striped T-Shirt','./products images/ladies wear/women_s striped t shirt.jpg','Rs.1250')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6 ">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/ladies wear/women_s casual striped crop top.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Casual Striped Crop Top</h5>
+                                        <p class="price">Rs.990</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W007" onclick="showModal('W007','Casual Striped Crop Top','./products images/ladies wear/women_s casual striped crop top.jpg','Rs.990')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/ladies wear/women_s shoulder ribbed white t shirt.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Shoulder Ribbed T-Shirt</h5>
+                                        <p class="price">Rs.2750</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W008" onclick="showModal('W008','Shoulder Ribbed T-Shirt','./products images/ladies wear/women_s shoulder ribbed white t shirt.jpg','Rs.2750')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6 ">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/ladies wear/womens cotton linen vintage trouser.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Linen Vintage Trouser</h5>
+                                        <p class="price">Rs.2650</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W009" onclick="showModal('W009','Linen Vintage Trouser','./products images/ladies wear/womens cotton linen vintage trouser.jpg','Rs.2650')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/ladies wear/Womens Jumpsuit.jpeg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Jumpsuit</h5>
+                                        <p class="price">Rs.2750</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W010" onclick="showModal('W010','Jumpsuit','./products images/ladies wear/Womens Jumpsuit.jpeg','Rs.2750')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6 ">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/ladies wear/women_s smart casual skirt.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Smart Casual Skirt</h5>
+                                        <p class="price">Rs.1150</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W011" onclick="showModal('W011','Smart Casual Skirt','./products images/ladies wear/women_s smart casual skirt.jpg','Rs.1150')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div class="card cardStyle">
+                                    <img class="card-img-top cardImage" src="./products images/ladies wear/women_s running shorts.jpg" responsive>
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title cardT">Running Short</h5>
+                                        <p class="price">Rs.2750</p>
+                                        <button type="button" class="btn btn-info productDetails" data-toggle="modal" data-target="#W012" onclick="showModal('W012','Running Short','./products images/ladies wear/women_s running shorts.jpg','Rs.2750')">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------------------------------------------    Footer    ------------------------------------------------------->
+
+
+        <footer id="foot " class="foot " style="height: auto; ">
+
+            <div style="background-color: #6351ce; ">
+                <div class="container ">
+
+                    <div class="row py-4 d-flex align-items-center ">
+                        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0 " style="border-radius: 10px; ">
+                            <h6 class="mb-0 ">Get connected with us on social networks!</h6>
+                        </div>
+
+                        <div class="col-md-6 col-lg-7 text-center text-md-right ">
+
+                            <!-- Social -->
+                            <a href="https://www.facebook.com/ " target="_blank ">
+                                <img src="fb.jpg " height="50px " style="border-radius: 5px; ">
+                            </a>
+                            <a href="https://www.instagram.com/ " target="_blank ">
+                                <img src="insta.jfif " height="50px " style="border-radius: 7px; ">
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container text-center text-md-left mt-5 ">
+                <div class="row mt-3 ">
+                    <div class="col-xs-12 col-md-3 mx-auto mb-4 ">
+                        <h6 class="text-uppercase font-weight-bold " style="text-align: center; "> Fashion Store</h6>
+                        <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto " style="width: 60px; ">
+                        <a href="#header ">
+                            <img class="img-thumbnail " src="Logo.jpg " width="100% " responsive>
+                        </a>
+
+
+                    </div>
+
+                    <div class="col-xs-12 col-md-3 mx-auto mb-4 ">
+                        <h6 class="text-uppercase font-weight-bold ">Products</h6>
+                        <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto " style="width: 60px; ">
+                        <p>
+                            <a href="#mensWear ">Men's Wear</a>
+                        </p>
+                        <p>
+                            <a href="#womenWear ">Women's Wear</a>
+                        </p>
+                    </div>
+
+                    <div class="col-xs-12 col-md-3 mx-auto mb-4 ">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold ">Useful links</h6>
+                        <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto " style="width: 60px; ">
+                        <p>
+                            <a href="#! ">Your Account</a>
+                        </p>
+                        <p>
+                            <a href="https://colombofashionweek.com/ " target="_blank ">Fashion News</a>
+                        </p>
+                        <p>
+                            <a href="#! ">Help</a>
+                        </p>
+
+                    </div>
+
+
+                    <!-- Contact -->
+                    <div class="col-xs-12 col-md-3 mx-auto mb-md-0 mb-4 ">
+
+
+                        <h6 class="text-uppercase font-weight-bold " style="text-align: center; ">Contact</h6>
+                        <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto " style="width: 60px; ">
+                        <p>
+                            <i class="mr-3 "></i> No.20, Kandy Road, Kelaniya<br> Sri Lanka</p>
+                        <p>
+                            <i class="mr-3 "></i> fashionstore@fashion.com</p>
+                        <p>
+                            <i class="mr-3 "></i> +94 112 500 400</p>
+                        <p>
+                            <i class="mr-3 "></i> +94 112 550 450</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3 " style="background-color: black;color: white ">© 2020 Copyright:
+                <a href="https://cal.kln.ac.lk/course/view.php?id=6029 " target="_blank "> WAD2020.com</a>
+            </div>
+
+
+        </footer>
+    </div>
+
+    <button onclick="scrollToTop() " id="goTop ">
+<img src="goTop.png " width=40px; height=60px; >
+</button>
+
+    <script>
+        // Copy Item Code Function            
+        function copyF() {
+            var code = document.getElementById("code");
+            code.select();
+            code.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            alert("Coppied text " + copy.innerHTML);
+        }
+
+
+        function scrollToTop() {
+
+            $(window).delay("slow ").scrollTop(0);
+        }
+
+        function showModal(id, name, src, price) {
+            var el = document.getElementById("modalView");
+
+
+            el.innerHTML = '<div class="modal fade" id="' + id + '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
+                '<div class="modal-dialog">' +
+                '<div class="modal-content">' +
+                '<div class="modal-header">' +
+                '<h5 class="modal-title" id="exampleModalLabel">' + name + '</h5>' +
+                '<br>' +
+
+                '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+                '<span aria-hidden="true">&times;</span>' +
+                '</button>' +
+                '</div>' +
+                '<div class="modal-body" style="background-color: #ecf0f1;">' +
+                '<img src="' + src + '" width="100%" style="border-radius: 10px; box-shadow: darkgray;">' +
+                '<div class="modalBody">' +
+                '<h3 style="margin-top: 20%;color: blue;">' + price + '</h3><br>' +
+                '<h5 style="margin-top: 10px;">Size : S/M/L/XL</h5>' +
+                '<h5 style="margin-top: 10px;">Item Code : </h5>' +
+                 '<form action="oderForm.php" method="post" target="_blank">' +
+                    '<input style="margin-top: 10px;background-color:white;width:80%;text-align:center;border:none;font-weight: bold;" type="text" id="code" readonly name="itemCode" value="' + id + '"></input><br>' +
+                    '<button type="submit" class="btn btn-warning" style="margin:20px 40% 5px 20%;padding:5px 45px 5px 45px">Buy</button>' +
+                 '</form>'+
+                
+
+                // '<button class="btn btn-outline-dark" style="margin-top: 10px;" onclick="copyF()">' +
+                // 'Copy Item Code ' +
+                // '</button>' +
+                '</div>' +
+                '</div>' +
+                '<div class="modal-footer">' +
+                '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>' +
+                // '<a href="oderForm.php" target="_blank">' +
+                // '<button type="button" class="btn btn-primary">Buy</button>' +
+                // '</a>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+
+        }
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
 </body>
 
 </html>
