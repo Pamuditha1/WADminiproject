@@ -19,6 +19,7 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
 
     <title>Fashions</title>
+    <link rel="icon" type="image/ico" href="logoT.jpg" />
 
 </head>
 
@@ -47,7 +48,7 @@
                             <h4 class="modal-title" style="text-align: center;">Login</h4>
                         </div>
 
-                        <form class="modal-body" id="mBody" action="loginCheck.php" method="post" target="_blank">
+                        <form class="modal-body" id="mBody" action="loginCheck.php"  method="post" target="_blank">
                             Username : <input id="uname" name="uname" type="text"><br>
                             Password : <input id="pswrd" name="pswrd" type="password">
                             <button type="submit" class="btn btn-info">Enter</button>
@@ -86,7 +87,7 @@
                         <a class="nav-link" href="AboutUs.html">About</a>
                     </li>  
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Place Order</a>
+                        <a class="nav-link" href="oderForm.php">Place Order</a>
                     </li>                                      
                     <li class="nav-item">
                         <a class="nav-link" href="ContactUs.html">Contact Us</a>
@@ -99,7 +100,7 @@
 
 
         <div class="container">
-            <div class="row">
+            <div class="row">                
 
                 <!-- Content -->
                 <div class="col-12">
@@ -486,7 +487,9 @@
                         <p>
                             <i class="mr-3 "></i> No.20, Kandy Road, Kelaniya<br> Sri Lanka</p>
                         <p>
-                            <i class="mr-3 "></i> fashionstore@fashion.com</p>
+                            <i class="mr-3 "></i> <a href="mailto:fashionstorecolombo@gmail.com">
+                                fashionstorecolombo@gmail.com
+                            </a></p>
                         <p>
                             <i class="mr-3 "></i> +94 112 500 400</p>
                         <p>
@@ -512,13 +515,13 @@
 
     <script>
         // Copy Item Code Function            
-        function copyF() {
-            var code = document.getElementById("code");
-            code.select();
-            code.setSelectionRange(0, 99999);
-            document.execCommand("copy");
-            alert("Coppied text " + copy.innerHTML);
-        }
+        // function copyF() {
+        //     var code = document.getElementById("code");
+        //     code.select();
+        //     code.setSelectionRange(0, 99999);
+        //     document.execCommand("copy");
+        //     alert("Coppied text " + copy.innerHTML);
+        // }
 
 
         function scrollToTop() {
@@ -541,7 +544,7 @@
                 '<span aria-hidden="true">&times;</span>' +
                 '</button>' +
                 '</div>' +
-                '<div class="modal-body" style="background-color: #ecf0f1;">' +
+                '<div class="modal-body" style="background-color: #ecf0f1;">' +                
                 '<img src="' + src + '" width="100%" style="border-radius: 10px; box-shadow: darkgray;">' +
                 '<div class="modalBody">' +
                 '<h3 style="margin-top: 20%;color: blue;">' + price + '</h3><br>' +
@@ -550,6 +553,7 @@
                  '<form action="oderForm.php" method="post" target="_blank">' +
                     '<input style="margin-top: 10px;background-color:white;width:80%;text-align:center;border:none;font-weight: bold;" type="text" id="code" readonly name="itemCode" value="' + id + '"></input><br>' +
                     '<button type="submit" class="btn btn-warning" style="margin:20px 40% 5px 20%;padding:5px 45px 5px 45px">Buy</button>' +
+                    '<input style="display:none" type="text" name="imageID" value="'+src+'"></input>' +
                  '</form>'+
                 
 

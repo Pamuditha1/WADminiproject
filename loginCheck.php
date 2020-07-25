@@ -11,6 +11,7 @@
         header( 'Location: showDatabase.php' );
         
         
+        
     } else {
         echo '
            <h1 style="color:red;text-align:center;"> Invalid Username or Password</h1>

@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" type="text/css" href="editedbootstrap.min.css">
 
-    <title>Oders(Admin)</title>
+    <title>Inquires(Admin)</title>
     <link rel="icon" type="image/ico" href="logoT.jpg" />
 
     <style>
@@ -39,7 +39,7 @@
 <body >
     <div class="container-fulid col-12">
 
-        <h1>Oders</h1>        
+        <h1>Inquires</h1>
         <h5 id="date"></h5>
         <h5 id="time"></h5>
         
@@ -55,8 +55,8 @@
                 ';
 
                 echo'
-                <a href="showInquiries.php">
-                <button class="btn btn-success" id="msgB" >Check Messages</button>
+                <a href="showDatabase.php">
+                <button class="btn btn-success" id="msgB" >Show Database</button>
                 </a>
                 ';
 
@@ -69,7 +69,7 @@
         
                 $conn = new mysqli( $server,$user , $pass,$db) ;
         
-                $sql = "SELECT*FROM oders" ;
+                $sql = "SELECT*FROM inquires" ;
                 $result = $conn->query($sql);
     //  .............................   Retrieve Data from Database   .....................................................
                 
@@ -77,16 +77,14 @@
                 <table class="table table-hover table-dark col-12">
                 <thead>
                 <tr>
-                    <th scope="col">Oder No</th>
+                    <th scope="col">Inquiry No</th>
                     <th scope="col">Date</th>
                     <th scope="col">Time</th>
                     <th scope="col">Customer Name</th>
-                    <th scope="col">Contact(Mobile)</th>
-                    <th scope="col">Contact(Fixed)</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Item Code</th>
-                    <th scope="col">Size</th>
-                    <th scope="col">Quantity</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Contact No.</th>
+                    <th scope="col">Message</th>
+
                 </tr>
                 </thead>
                 <tbody> ';
@@ -97,16 +95,13 @@
                     while($row = $result->fetch_assoc()) {
                     echo '
                         <tr>
-                            <th scope="row">'. $row["oderID"].'</th>
+                            <th scope="row">'. $row["inquiryID"].'</th>
                             <td>'. $row["date"].'</td>
-                            <td>'.$row["time"].'</td>
-                            <td>'. $row["name"].'</td>
-                            <td>'.$row["mobileNo"].'</td>
-                            <td>'. $row["landNo"].'</td>
-                            <td>'.$row["address"].'</td>
-                            <td>'. $row["itemNo"].'</td>
-                            <td>'.$row["size"].'</td>
-                            <td>'. $row["quantity"].'</td>       
+                            <td>'. $row["time"].'</td>
+                            <td>'. $row["customerName"].'</td>
+                            <td>'.$row["email"].'</td>
+                            <td>'. $row["contactNum"].'</td>
+                            <td>'.$row["message"].'</td>         
                             
                         </tr>';  
                 
@@ -145,7 +140,7 @@
         var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         var date =d.getDate() +' '+(months[d.getMonth()])+' '+d.getFullYear();
 
-        document.getElementById("date").innerHTML= date;
+        document.getElementById("date").innerHTML = date;
             
     </script>
 

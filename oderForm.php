@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <!-- <link rel="stylesheet" type="text/css" href="mailStyle.css"> -->
-    <title>Odering Form</title>
+    <title>Place Oder</title>
+    <link rel="icon" type="image/ico" href="logoT.jpg" />
 
     <style>
         #msg {
@@ -47,6 +48,13 @@
             font-family: "Lucida Console", Courier, monospace;
             font-weight: 900;
         }
+        #showPimg{
+            position:absolute; 
+            right:-20px; 
+            top: -120px;
+            display:none;
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4), 0 4px 10px 0 rgba(0, 0, 0, 0.4);
+        }
 
         @media only screen and (min-width: 800px) {
             .formMargin {
@@ -77,6 +85,9 @@
                     $itemCode = $_POST["itemCode"];
                     $rand=rand();
                     $_SESSION['rand']=$rand;
+
+                    $image = $_POST["imageID"];
+                    $imageSrc = "'$image'";
                 ?>
                     <input type="hidden" value="<?php echo $rand; ?>" name="randcheck" />
         
@@ -123,11 +134,14 @@
                         <label for="adrs" class="control-label">Address :    </label>
                         <textarea class="form-control" type="text" id="adrs" name="adrs" rows="5" required></textarea>
                     </div>
-                    <div class="form-group formMargin">
+                    <div class="form-group formMargin" onmouseover="showProductImage()" onmouseleave="hideImg()">
                         <label for="item" class="control-label">Item Code :    </label>
                         <input class="form-control col-sm-8" type="text" id="itm" name="itm" value="<?php echo "$itemCode" ?>" readonly required>
+                        <div class="col-sm-12">
+                            <img  id="showPimg" src=" <?php echo "$image" ?> " height="200px" width="auto" responsive>
+                        </div>
                         <!-- <p style="margin-left: 5%;color:blue">*copy the item code from the product view</p> -->
-                    </div>
+                    </div>                    
                     <div class="form-group formMargin">
                         <label for="size" class="control-label">Size :    </label>
                         <select class="form-control" id="size" name="size" required>
@@ -163,16 +177,35 @@
     <script>
           
         var d = new Date();
-        var date =d.getDate() +'-'+(d.getMonth()+1)+'-'+d.getFullYear();
-        document.getElementById("date").value= date;
 
-        var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        var hours = d.getHours();
+        var minutes = d.getMinutes();
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        minutes = minutes < 10 ? '0'+minutes : minutes;
+        var time = hours + ':' + minutes + ' ' + ampm;
         document.getElementById("time").value= time;
+        
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var date =d.getDate() +' '+(months[d.getMonth()])+' '+d.getFullYear();
+        
+        document.getElementById("date").value= date;
+     
+        
 
         function resetForm() {
             document.getElementById("form").reset();
             document.getElementById("msg").style.display = "none";
             window.close();
+        }
+
+        function showProductImage() {
+            document.getElementById("showPimg").style.display = "inline";
+            
+        }
+        function hideImg() {
+            document.getElementById("showPimg").style.display = "none";
         }
 
         function validate() {
@@ -307,6 +340,10 @@
         $size = $_POST["size"];
         $qtty = $_POST["qtty"];
 
+        $image = $_POST["imageID"];
+        $imageSrc = "'$image'";
+        
+
 
         $server = 'localhost:3308';
         $user = 'root';
@@ -358,6 +395,9 @@
             $size = $_POST["size"];
             $qtty = $_POST["qtty"];
 
+            $image = $_POST["imageID"];
+            $imageSrc = "'$image'";
+
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
@@ -368,9 +408,10 @@
 
             $mail->setFrom('fashionstorecolombo@gmail.com', 'Fashion Store');
             $mail->addAddress($email , $name) ; 
-
+            $mail->AddEmbeddedImage($imageSrc, 'image');
             $mail->Subject = 'Oder Confirmation';
-            $mail->isHTML(true);
+            $mail->isHTML(true);            
+            
             $mailContent = '
             <div style="margin: 30px 20px 20px 40px">
                 <h1 style="text-align: center;">You have successfully placed the oder</h1>
@@ -386,10 +427,11 @@
                 <p>Item Code               :<i>' .$itm.'</i></p>
                 <p>Size                    :<i>' .$size.'</i></p>
                 <p>Quantity                :<i>' .$qtty.'</i></p>
+                <img src="cid:image">
 
                 <p style="color:blue">Your oder will be received you within 10 working days.</p>
                 <h4 style="text-align: center;">----  Thank You for shopping with us .  ---</h4>
-            </div>                
+                </div>                
                 
                 ';
 
