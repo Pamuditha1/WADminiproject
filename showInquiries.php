@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" type="text/css" href="editedbootstrap.min.css">
 
-    <title>Inquires(Admin)</title>
+    <title>FS | Inquires(Admin)</title>
     <link rel="icon" type="image/ico" href="logoT.jpg" />
 
     <style>
@@ -33,6 +33,12 @@
             top: -40px;
             right: 20px;
             position: absolute;
+        }
+        @media only screen and (max-width: 600px) {
+            #msgB{
+            top: 50px;
+            right: 20px;
+            
         }
     </style>
 </head>
@@ -74,20 +80,21 @@
     //  .............................   Retrieve Data from Database   .....................................................
                 
             echo'
-                <table class="table table-hover table-dark col-12">
-                <thead>
-                <tr>
-                    <th scope="col">Inquiry No</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Time</th>
-                    <th scope="col">Customer Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Contact No.</th>
-                    <th scope="col">Message</th>
+                <div class="table-responsive">
+                    <table class="table table-hover table-dark col-12">
+                    <thead>
+                    <tr>
+                        <th scope="col">Inquiry No</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Contact No.</th>
+                        <th scope="col">Message</th>
 
-                </tr>
-                </thead>
-                <tbody> ';
+                    </tr>
+                    </thead>
+                    <tbody> ';
         
                 if ($result->num_rows > 0) {
                 
@@ -108,7 +115,8 @@
                     }        
                     echo '
                         </tbody>
-                    </table>';
+                    </table>
+                </div>';
             
                 } 
                 else {

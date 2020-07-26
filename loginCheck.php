@@ -8,8 +8,7 @@
         session_start();
         $_SESSION["uname"] = $uname;
         $_SESSION["pass"] = $pass;
-        header( 'Location: showDatabase.php' );
-        
+        header( 'Location: showDatabase.php' );        
         
         
     } else {

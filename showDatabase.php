@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" type="text/css" href="editedbootstrap.min.css">
 
-    <title>Oders(Admin)</title>
+    <title>FS | Oders(Admin)</title>
     <link rel="icon" type="image/ico" href="logoT.jpg" />
 
     <style>
@@ -33,6 +33,14 @@
             top: -40px;
             right: 20px;
             position: absolute;
+        }
+        @media only screen and (max-width: 600px) {
+            #msgB{
+            top: 50px;
+            right: 20px;
+            
+        }
+
         }
     </style>
 </head>
@@ -74,22 +82,23 @@
     //  .............................   Retrieve Data from Database   .....................................................
                 
             echo'
+            <div class="table-responsive">
                 <table class="table table-hover table-dark col-12">
-                <thead>
-                <tr>
-                    <th scope="col">Oder No</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Time</th>
-                    <th scope="col">Customer Name</th>
-                    <th scope="col">Contact(Mobile)</th>
-                    <th scope="col">Contact(Fixed)</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Item Code</th>
-                    <th scope="col">Size</th>
-                    <th scope="col">Quantity</th>
-                </tr>
-                </thead>
-                <tbody> ';
+                    <thead>
+                    <tr>
+                        <th scope="col">Oder No</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Contact(Mobile)</th>
+                        <th scope="col">Contact(Fixed)</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Item Code</th>
+                        <th scope="col">Size</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                    </thead>
+                    <tbody> ';
         
                 if ($result->num_rows > 0) {
                 
@@ -112,8 +121,9 @@
                 
                     }        
                     echo '
-                        </tbody>
-                    </table>';
+                    </tbody>
+                </table>
+            </div>';
             
                 } 
                 else {
