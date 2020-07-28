@@ -28,7 +28,7 @@
         .formD{
             padding-top: 100px;
             padding-bottom: 100px;
-            background-color: #152238;
+            background-color: #152238; 
             color: white;
             border-radius: 30px;
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 40px 0 rgba(0, 0, 0, 0.4);
@@ -58,6 +58,9 @@
             top: -120px;
             display:none;
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4), 0 4px 10px 0 rgba(0, 0, 0, 0.4);
+        }
+        .optionS{
+            background-color: #152238; 
         }
 
         @media only screen and (min-width: 800px) {
@@ -149,11 +152,11 @@
                     <div class="form-group formMargin">
                         <label for="size" class="control-label">Size :    </label>
                         <select class="form-control" id="size" name="size" required>
-                            <option value="XS">XS</option>
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
+                            <option class="optionS" value="XS">XS</option>
+                            <option class="optionS" value="S">S</option>
+                            <option class="optionS" value="M">M</option>
+                            <option class="optionS" value="L">L</option>
+                            <option class="optionS" value="XL">XL</option>
                         </select>
                     </div>
                     <div class="form-group formMargin">
@@ -361,15 +364,30 @@
     
         
         if(mysqli_query($conn, $sql)){
+
+            sendMail(); 
+
             echo '<script>
                 document.getElementById("msg").style.display = "block";
             </script>';
 
-            echo '<script> 
-            document.getElementById("form").reset();
-            window.close();
-            </script>';
-            sendMail();        
+            // echo '<script> 
+            // document.getElementById("form").reset();
+           
+            // </script>';
+
+            echo '<script>
+                var t = setInterval(close,3000);
+                function close() {
+                    window.location.replace("index.html");
+                }
+                // clearInterval(t);         
+                
+            </script>'; 
+            // echo '<script>         
+            //     window.location.replace("index.html");
+            // </script>'; 
+                  
 
 
         } else{

@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #152238
 }
 
@@ -11,6 +11,7 @@ body{
     border-radius: 10px;
     position: relative;
 }
+
 #logo {
     width: 10%;
     height: auto;
@@ -18,28 +19,27 @@ body{
     z-index: +10px;
 }
 
-#Navbar{
+#Navbar {
     background-color: #ceceffd0!important;
-    
 }
 
-
-h1{
+h1 {
     color: white;
     opacity: 0.7;
-    margin:40px;
-    font-family: 'Kaushan Script';font-size: 70px;
+    margin: 40px;
+    font-family: 'Kaushan Script';
+    font-size: 70px;
 }
 
-#siteName{
-    
+#siteName {
     position: absolute;
     top: 40%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    right: 40px;    
+    right: 40px;
 }
-#brand{
+
+#brand {
     color: black;
     opacity: 1;
     margin: 0;
@@ -47,7 +47,7 @@ h1{
     font-size: 50px;
 }
 
-#tagline{
+#tagline {
     font-family: 'Dynalight';
     font-size: 35px;
     text-align: center;
@@ -55,21 +55,18 @@ h1{
 }
 
 @media only screen and (max-width: 600px) {
-    #siteName{    
-        
+    #siteName {
         top: 50%;
-        right: 15px;    
+        right: 15px;
     }
-    #brand{
-        font-size: 25px;        
+    #brand {
+        font-size: 25px;
     }
-    
-    #tagline{
-        font-size: 10px;
+    #tagline {
+        font-size: 20px;
         margin: -5px;
     }
 }
-
 
 .itemCode {
     background-color: yellow;
@@ -92,7 +89,8 @@ h1{
     background-color: hsl(0, 0%, 100%, 0.5);
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
-    font-family: 'Inknut Antiqua';font-size: 15px;
+    font-family: 'Inknut Antiqua';
+    font-size: 15px;
 }
 
 .cardStyle {
